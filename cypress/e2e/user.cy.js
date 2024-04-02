@@ -4,7 +4,7 @@ describe("Petstore_user", () => {
     cy.createUser(userName);
   });
 
-  it.only("Update user", () => {
+  it("Update user", () => {
     cy.createUser(userName);
     cy.request("GET", `/user/${userName}`).then((response) => {
       expect(response.status).to.equal(200);
